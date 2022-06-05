@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  form {
+    float : left;
+    display : table;
+    padding : 1em;
+    margin : 0.0em;
+    background : radial-gradient(circle, rgb(238, 174, 202, 1) 0%, rgb(148, 187, 233, 1) 100%);
+    font-family : Verdana, Geneva, Tahoma, sans-serif;
+    font-size : 1em;
+    }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    form p {
+    display : table-row;
+    margin-left : 0.1em;
+    font-family : Verdana, Geneva, Tahoma, sans-serif;
+    font-size : 1em;
+    box-sizing : border-box;
+    }
+    .pole {
+    display : table-cell;
+    margin-bottom : 1em;
+    background-color : rgb(224, 250, 252);
+    border : rgb(14, 121, 244) solid 1px;
+    border-radius : 0.4em;
+    }
+    .poledate {
+    width : 97%;
+    border-radius : 0.4em;
+    margin-bottom : 0.8em;
+    }
+    p .label {
+    display : table-cell;
+    font-size : 1em;
+    }
+    button {
+    display : block;
+    float : right;
+    background-color : hsl(191 27% 33%);
+    border : rgb(14, 121, 244) solid 1px;
+    color : white;
+    transition-duration : 0.8s;
+    cursor : pointer;
+    }
+    button:hover {
+    background-color : rgb(138, 138, 138);
+    color : blanchedalmond;
+    }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+h1 {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+    .p-wrapper {
+    font-size : 0.7em;
+    text-align : justify;
+    font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right : 0.5em;
+    }
+    
+    input[type="range"] {
+        cursor : grab;
+        padding : initial;
+        border : initial;
+        margin : 2px;
+        }
+    
+    #recenzia {
+    margin-bottom : 0;
+    color : #00001E;
+    }
+    @media only screen and (max-width: 290px) {
+    .logo {
+    text-align : center;
+    }
+    form {
+    display : block;
+    width : 100%;
+    }
+    .pole {
+    display : block;
+    width : 85%;
+    }
+    form p {
+    display : block;
+    }
+    .poledate {
+    width : 97%;
+    border-radius : 0.6em;
+    text-align : center;
+    width : 85%;
+    }
+    .label {
+    display : block;
+    }
+    h1 {
+    color : rgb(255, 255, 255);
+    text-align : center;
+    display : block;
+    margin-top : 1em;
+    font-family : Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .p-wrapper {
+    text-align : center;
+    margin-right : 0.5em;
+    color : white;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    button {
+    width : 85%;
+    float : left;
+    }
+    }
+
+
