@@ -1,9 +1,27 @@
 
+#wrapper{
+  display: grid;
+  grid-template-columns: 10em 7em 15em 6em 6em 6em 5em;
+  border: 1px solid gray;
+  background-color: gold;
+  grid-auto-flow: column;
+}
+
+.addedMovies{
+  border: 1px solid gray;
+  margin-left: 1em;
+  display: grid;
+  grid-template-columns: 10em 7em 15em 6em 6em 6em 5em;
+ margin: 0.1em; 
+
+
+}
+
   form {
     float : left;
     display : table;
     padding : 1em;
-    margin : 0.0em;
+    margin-right : 1em;
     background : radial-gradient(circle, rgb(238, 174, 202, 1) 0%, rgb(148, 187, 233, 1) 100%);
     font-family : Verdana, Geneva, Tahoma, sans-serif;
     font-size : 1em;
@@ -111,5 +129,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float : left;
     }
     }
+
+
 
 

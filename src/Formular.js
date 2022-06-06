@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//commit
+
 
 function Formular({ addNewMovie }) {
   const [movieName, movieNameChanged] = useState("");
@@ -8,14 +8,14 @@ function Formular({ addNewMovie }) {
   const [review, reviewChanged] = useState("");
   const [date, dateChanged] = useState("");
   const [rating, ratingChanged] = useState("");
-  //genre, genreChanged
+  
 
   return (
-    <>
+    <div id="formWrapper">
       <h1>Pridaj recenziu</h1>
       <form method="get">
         <p>
-          <label className="label" for="fname">
+          <label className="label" htmlFor="fname">
             <i className="fa fa-file-movie-o"></i> Názov filmu:*
           </label>
           <input
@@ -32,7 +32,7 @@ function Formular({ addNewMovie }) {
           <br />
         </p>
         <p>
-          <label className="label" for="nick">
+          <label className="label" htmlFor="nick">
             <i className="fa fa-user-circle-o"></i> Meno/nick:
           </label>
           <input
@@ -48,7 +48,7 @@ function Formular({ addNewMovie }) {
           <br />
         </p>
         <p>
-          <label className="label" for="email">
+          <label className="label" htmlFor="email">
             <i className="fas fa-mail-bulk"></i> Email:*
           </label>
           <input
@@ -65,7 +65,7 @@ function Formular({ addNewMovie }) {
           <br />
         </p>
         <p>
-          <label className="label" for="recenzia">
+          <label className="label" htmlFor="recenzia">
             <i className="fa fa-edit"></i> Recenzia:
           </label>
           <textarea
@@ -80,7 +80,7 @@ function Formular({ addNewMovie }) {
         </p>
         <br />
         <p>
-          <label className="label" for="date">
+          <label className="label" htmlFor="date">
             <i className="fa fa-eye"></i> Videl som ho:
           </label>
           <input
@@ -97,7 +97,7 @@ function Formular({ addNewMovie }) {
         </p>
         <br />
         <p>
-          <label className="label" for="hodnotenie">
+          <label className="label" htmlFor="hodnotenie">
             <i className="fa fa-percent"></i> Hodnotenie: <br />
           </label>
           <input
@@ -122,37 +122,36 @@ function Formular({ addNewMovie }) {
           </label>
 
           <input type="radio" id="thriller" name="thriller" />
-          <label for="thriller">Thriller</label>
+          <label htmlFor="thriller">Thriller</label>
           <br />
           <input type="radio" id="drama" name="drama" />
-          <label for="drama">Dráma</label>
+          <label htmlFor="drama">Dráma</label>
           <br />
           <input type="radio" id="komedia" name="komedia" />
-          <label for="komedia">Komédia</label>
+          <label htmlFor="komedia">Komédia</label>
           <br />
           <input type="radio" id="romantika" name="romantika" />
-          <label for="romantika">Romantika</label>
+          <label htmlFor="romantika">Romantika</label>
           <br />
           <input type="radio" id="horor" name="horor" />
-          <label for="horor">Horor</label>
+          <label htmlFor="horor">Horor</label>
           <br />
           <input type="radio" id="rozpravka" name="rozpravka" />
-          <label for="rozpravka">Rozprávka</label>
+          <label htmlFor="rozpravka">Rozprávka</label>
           <br />
         </p>
         <br />
         <button
           onClick={() => {
             addNewMovie((movies) => {
-
-              let newReview = movies.concate({
-                movieName: movieName,
-                nick: nick,
-                email: email,
-                review: review,
-                date: date,
-                rating: rating,
-              });
+              let newReview = movies.concat({               
+                "movieName": movieName,
+                "nick": nick,
+                "email": email,
+                "review": review,
+                "date": date,
+                "rating": rating,
+            });
 
               localStorage.setItem("movies", JSON.stringify(newReview));
 
@@ -163,7 +162,7 @@ function Formular({ addNewMovie }) {
           Poslať
         </button>
       </form>
-    </>
+    </div>
   );
 }
 
