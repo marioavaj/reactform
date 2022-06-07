@@ -5,9 +5,14 @@ import Formular from './Formular';
 
 
 function App() {
-  const [movies, addMovie] = useState(JSON.parse(localStorage.getItem("movies")));
+ const [movies, addMovie] = useState([]);
   
-    
+ if (movies.length === 0){
+  JSON.parse(localStorage.getItem("movies"))
+
+ }
+  
+  
 
   return (
   <>
@@ -29,7 +34,7 @@ function App() {
     <div>{e.email}</div>
     <div>{e.review}</div>
     <div>{e.date}</div>
-    <div>{e.rating}</div>
+    <div>{e.rating} %</div>
     </div> 
     )})}
   
