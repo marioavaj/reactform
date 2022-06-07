@@ -5,13 +5,19 @@ import Formular from './Formular';
 
 
 function App() {
- const [movies, addMovie] = useState([]);
-  
- if (movies.length === 0){
-  JSON.parse(localStorage.getItem("movies"))
+ const [movies, addMovie] = useState( () =>  {let a=JSON.parse(localStorage.getItem("movies"))
+if (a==undefined){
 
- }
+  return []; 
+
+}else {return a}
+
+});
   
+ 
+  
+
+ 
   
 
   return (
